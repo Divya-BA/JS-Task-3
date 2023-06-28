@@ -4,10 +4,10 @@
   </head>
   <body>
     <script>
-    //Create a new XMLHttpRequest object
+   
       var xhr = new XMLHttpRequest();
 
-      //Define HTTP method and URL
+      
       var method = "GET";
       var url = "https://restcountries.com/v3.1/all";
 
@@ -15,10 +15,10 @@
       xhr.open(method, url);
 
       xhr.onload = function () {
-        debugger;
+      
         if (xhr.status === 200) {
-          //Request was successful
-          //console.log(xhr.responseText);
+          
+          console.log(xhr.responseText);
           var details = JSON.parse(xhr.responseText);
           for(var i=0;i<details.length;i++)
             {
@@ -26,7 +26,7 @@
           
             } 
         else {
-          //Request failed
+         
           console.log("Request failed", xhr.status);
         }
       };
